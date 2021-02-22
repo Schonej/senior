@@ -1,15 +1,27 @@
 var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 10,
-  slidesPerGroup: 3,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+  // init: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    '@0.00': {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    '@0.75': {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    '@1.00': {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    '@1.50': {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  }
 });

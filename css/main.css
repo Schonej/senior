@@ -26,7 +26,7 @@ h1 {
 }
 
 nav {
-  height: 12vh;
+  height: 14vh;
   background: white;
   position: relative;
 }
@@ -355,13 +355,14 @@ nav .menu-btn {
 
 .swiper-container {
   margin-top: 5%;
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
 .swiper-slide img {
   width: 100%;
-  height: 120px;
+  height: 100%;
+  border-radius: 25px;
 }
 
 .swiper-slide {
@@ -456,39 +457,38 @@ footer {
   margin-bottom: 4em;
 }
 
+.plans {
+  border: 1px solid white;
+}
+
 @media only screen and (min-width: 600px) {
   nav {
-    height: 18vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 15vh;
+    padding-right: 5%;
+    width: 100%;
   }
   .logo img {
-    height: 150px;
+    height: 120px;
   }
   .colorful img {
     width: 60%;
-    height: 700px;
+    height: 800px;
     float: right;
   }
   .intromessage {
     margin-left: 2%;
-    margin-top: 10%;
+    margin-top: 15%;
     font-size: 70pt;
   }
   .subbutton {
-    margin-top: 10%;
     margin-left: 5%;
     width: 30%;
     height: 100px;
     margin-bottom: 0;
     margin-top: 0;
-  }
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
   }
   .swiper-container h1 {
     margin-left: .5em;
@@ -497,40 +497,58 @@ footer {
   .nav-links li a {
     color: #1A1A1D;
     text-decoration: none;
-    font-size: 30pt;
+    font-size: 25px;
     font-family: 'Roboto', sans-serif;
   }
-  .line {
-    width: 80px;
-    height: 8px;
-    background: #1A1A1D;
-    margin: 15px;
+  .hamburger {
+    display: none;
   }
   .nav-links {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin-left: auto;
     color: #F3F3F3;
+    height: 15vh;
+    width: 80%;
     text-decoration: none;
     background: white;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    clip-path: circle(100px at 80% -20%);
-    -webkit-clip-path: circle(100px at 80% -20%);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    pointer-events: none;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    clip-path: none;
+    -webkit-clip-path: none;
+    -webkit-transition: none;
+    transition: none;
+    pointer-events: visible;
   }
   .nav-links.open {
-    clip-path: circle(1200px at 90% -10%);
-    -webkit-clip-path: circle(1200px at 90% -10%);
-    pointer-events: all;
+    pointer-events: visible;
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .nav-links li:nth-child(1) {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav-links li:nth-child(2) {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .nav-links li:nth-child(3) {
+    -webkit-transition: none;
+    transition: none;
+  }
+  li.fade {
+    pointer-events: visible;
+  }
+  .swiper-pagination {
+    margin-top: 10%;
   }
 }
 /*# sourceMappingURL=main.css.map */
