@@ -202,6 +202,8 @@
       text-overflow: ellipsis;
       color: white;
       margin: 20px;
+      font-family: 'Roboto', sans-serif;
+
   }
   .movies-box:hover{
       transform: translateY(-10px);
@@ -261,15 +263,28 @@
   .swiper-container {
     margin-top: 5%;
     width: 90%;
-    height: 100%;
+    height: auto;
   }
   .swiper-slide img{
     width: 100%;
-    height: 100%;
-    border-radius: 25px;
+    height: auto;
+    object-fit: cover;
+    padding: 1%;
+    border-radius: 5%;
+  }
+  .swiper-slide:hover{ position: relative; 
+    top: -5px;} 
+
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    color: #C3073F !important;
+    font-size: 40pt !important;
+  }
+  .swiper-button-prev:after{
+    color:#C3073F !important;
   }
 
   .swiper-slide {
+    border-radius: 5%;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -313,6 +328,10 @@
       font-size: 20pt;
       margin-left: 25%;
       border-radius: 5%;
+      cursor: pointer;
+  }
+  .subbutton :hover{
+    background-color: #950740;
   }
   .icon-bar{
       margin-top: 3%;
@@ -366,6 +385,42 @@
   .plans{
     border: 1px solid white;
   }
+  .base{
+    background-color: white;
+    margin: 1em;
+    text-align: center;
+  }
+  p{
+    color:#3a3a3a;
+  }
+  :root {
+    --borderWidth: 7px;
+    --height: 18px;
+    --width: 12px;
+    --borderColor: #78b13f;
+  }
+  
+  .check {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: var(--height);
+    width: var(--width);
+    border-bottom: var(--borderWidth) solid var(--borderColor);
+    border-right: var(--borderWidth) solid var(--borderColor);
+  }
+  .buywords{
+    width: 60%;
+  }
+  .buyoption button{
+    background-color: #C3073F;
+    color: white;
+    height: 80px;
+    width: 150px;
+    align-content: center;
+    margin: .3em;
+    font-size: 20pt;
+  }
+
 
 
 
@@ -382,17 +437,16 @@
     height: 120px;
   }
   .colorful img{
-    width: 60%;
-    height: 800px;
+    width: 50%;
+    height: 600px;
     float: right;
   }
   .intromessage{
-    margin-left: 2%;
-    margin-top: 15%;
-    font-size: 70pt;
+    font-size: 65pt;
+    margin-bottom: 5%;
   }
   .subbutton{
-    margin-left: 5%;
+    margin-left: 9%;
     width: 30%;
     height: 100px;
     margin-bottom: 0;
